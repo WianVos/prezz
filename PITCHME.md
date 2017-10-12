@@ -4,7 +4,7 @@
 +++
 Amazon Elastic Compute Cloud .. 
 ---
-## Welke vier catagorieen zijn er binnen EC2? 
+## Welke vier catagorieen instance typen zijn er binnen EC2? 
 +++
 * On Demand
 * Reserved capacity
