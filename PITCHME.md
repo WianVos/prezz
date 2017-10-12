@@ -21,7 +21,7 @@ vroeger per uur .. nu per seconde
 --- 
 ## Welke instance types zijn er binnen EC2
 +++
-#DR Mc GIFT PX
+# DR Mc GIFT PX
 +++
 * D Dense Storage
 * R Ram intensive (memory optimized)
