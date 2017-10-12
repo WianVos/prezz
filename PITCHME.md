@@ -43,7 +43,22 @@ EBS staat voor elastic block storage
 EBS kun je gebruiken als normale disk space en b.v. een os op installeren . 
 EC2 is puur voor objecten 
 ---
-
+## Welke typen EBS volumes zijn er? 
++++
+* SSD 
+..* GP2 < 10.000 IOPS
+..* IO1 > 10.000 IOPS
+* HDD
+..* ST1 Frequent Access
+..* SC1 less Frequent Access
+..* Magnetic cheap infrequent access 
+---
+## welke EBS volumes kunnen worden gebruikt als boot volumes in EC2??
++++
+* GP2
+* IO1
+* Magnetic
+---
 ## Wat is een spot instance ? 
 +++
 Een instance waarbij je een prijs opgeeft .. wanneer de actuele (markt) prijs voor een instance (al naar geland de bezetting van de region) onder je gestelde max prijs zakt wordt deze opgestart .. stijgt de prijs er boven dan wordt deze getermineerd ..
@@ -269,7 +284,22 @@ Efs is een shared filesystem dat mee groeit met het gebruik
 +++
 NFS (V4) 
 In Principe is EFS een metered pay as you go nfs service 
-
-
- 
-
+---
+## wat zijn de karakterestieken van een security group ten aanzien van netwerk verkeer. 
++++
+al het inbound traffic wordt geblockeerd
+al het outbound traffic wordt toegelaten
+---
+## hoeveel ec2 instances kun je koppelen aan een security group
++++
+onbeperkt
+---
+## Hoeveel security groepen kun je koppelen aan 1 ec2 instance
++++
+onbeperkt 
+---
+## kun je specifieke ipadressen toelaten middels een security group ? 
++++
+Ja je kunt een specifiek ip toegang verschaffen tot een machine middels een security group
++++ 
+Wat niet kan is een specifiek ip-adress blokkeren
