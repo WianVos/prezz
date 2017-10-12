@@ -1,15 +1,15 @@
 # vragen ec2
-
+---
 ## Waar staat ec2 voor ? 
 +++
 Amazon Elastic Compute Cloud .. 
 ---
 ## Welke vier catagorieen zijn er binnen EC2? 
 +++
-*On Demand: 
-*Reserved capacity
-*Spot instances. 
-*Dedicated hosts. 
+..*On Demand
+..*Reserved capacity
+..*Spot instances 
+..*Dedicated hosts 
 ---
 ## Wat is duurder On Demand instances of Spot Instances? 
 +++
