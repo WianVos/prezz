@@ -15,6 +15,35 @@ Amazon Elastic Compute Cloud ..
 +++
 On Demand is de duurste optie binnen ec2 
 ---
+## Wat is de tijdseenheid waarin je EC2 capaciteit afrekend??
++++
+vroeger per uur .. nu per seconde
+--- 
+## Welke instance types zijn er binnen EC2
++++
+#DR Mc GIFT PX
++++
+* D Dense Storage
+* R Ram intensive (memory optimized)
+* M Main choice for general compute
+* C Compute Optimized
+* G Graphics intensive
+* I High speed storage (IOPS)
+* F FPGA (Field programmable gate array)
+* T Cheap general purpose (T2.micro)
+* P Graphics (think Pics ???? wutt ?? )
+* X eXtreme Memory 
+---
+## wat is EBS
++++
+EBS staat voor elastic block storage 
++++ 
+## Hoe verschilt dit van EC2
++++
+EBS kun je gebruiken als normale disk space en b.v. een os op installeren . 
+EC2 is puur voor objecten 
+---
+
 ## Wat is een spot instance ? 
 +++
 Een instance waarbij je een prijs opgeeft .. wanneer de actuele (markt) prijs voor een instance (al naar geland de bezetting van de region) onder je gestelde max prijs zakt wordt deze opgestart .. stijgt de prijs er boven dan wordt deze getermineerd ..
