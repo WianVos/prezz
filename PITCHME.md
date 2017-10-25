@@ -66,6 +66,7 @@ Maak met behulp van de tot nu toe behandelede middelen (EC2, S3, Route53.... ) e
 * 2) Pieken in verkeer moeten worden opgevangen. 
 * 3) te benaderen via <yournamehere>.fredforet.nl
 * 4) Niet meteen geharmend wordt .. (denk aan sec. groups, policies ed.)
+* 5) Niet plat op S3 gehost wordt ..... (dit voor de meer lui ingestelden onder ons)
 
 +++
 
