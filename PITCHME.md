@@ -56,14 +56,24 @@ Failover: routeert in eerste instantie naar je A site en bepaald op basis van ee
 Geolocation: routering gebaseerd op de geografische locatie van je gebruikers . 
 
 ---
-# Individuele opdracht 
-Maak met behulp van de tot nu toe behandelede middelen (EC2, S3, Route53.... ) een hosting oplossing voor onze tech blog die 
-1) Het uitvallen van een regio binnen aws overleeft. 
-2) Pieken in verkeer kan opvangen. 
-3) te benaderen is via <yournamehere>.fredforet.nl
-4) Niet meteen geharmend wordt .. (denk aan sec. groups, policies ed.)
+# opdracht 
++++
+Maak met behulp van de tot nu toe behandelede middelen (EC2, S3, Route53.... ) een hosting oplossing voor onze tech blog 
++++
+### Voorwaarden 
 
-Over een uur klaar is ... tik tok tik tok .. duurt lang ... 
+* 1) Het uitvallen van een regio binnen aws moeten worden overleeft. 
+* 2) Pieken in verkeer moeten worden opgevangen. 
+* 3) te benaderen via <yournamehere>.fredforet.nl
+* 4) Niet meteen geharmend wordt .. (denk aan sec. groups, policies ed.)
 
- 
++++
+
+Over een uur gaan we de verschillende oplossingen bespreken
+... tik tok tik tok .. duurt lang ... 
+
+als je de source files van de blog nodig hebt dan hoor ik het graag
++++
+
+
 
