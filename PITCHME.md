@@ -1,80 +1,110 @@
-# vragen route53
+# vragen Databases
 ---
-## Waar staat NS voor in de term NS Record
-+++
-Name server
----
-## Waar worden NS records voor gebruikt? 
-+++
-Om vanuit een Top level domain server door te verwijzen naar de DNS server voor een specifiek domain
----
-## Wat is een A record 
-+++
-Een A record is een adres record .. dit is het record dat doorverwijst naar een ip adres bij een fqdn 
----
-## Wat is een TTL record . 
-+++
-Een Time to Live record geeft aan hoe lang een A record geldig is . Dit wordt gebruikt in geval van DNS caching 
-+++
-Wat is de default TTL (veel voorkomende ) van de meeste a records.. 
-2 dagen .
----
-## Wat is een CNAME? 
-+++
-Een CNAME wordt gebruikt om het ene domain naar het andere te resolven 
----
-## Wat is een Alias record.
-+++
-Een alias record is bijna gelijk aan een CNAME met het verschil dat een alias record wel naar een zone apex (naked zone) kan verwijzen en een CNAME niet (CNAME kan alleen resolven naar een A Record) 
-+++
-Alias records zijn uniek voor AWS en veranderen mee met wijzigingen in de AWS resources waar ze naar verwijzen 
----
-## Als je binnen route53 een domain registreert welke records krijg je dan automatisch??
-+++
-1 soa record en 4 NS records.. 
----
-## Welke routing policies kent route53??
-+++
-* Simple 
-* Weighted
-* Latency
-* Failover
-* Geolocation
----
-## Wat zijn de karakteristieken van de verschillende routing policies
-+++
-Simple : een a record dat naar een endpoint (loadbalancer, webserver)  verwijst. Platte verwijzing .. geen enkele routing intelligentie
-+++
-Weighted : Hierbij kun je aangeven hoeveel van het verkeer naar het ene en hoeveel er naar het andere endpoint gaat ( meerdere eindpoints mogelijk) .. (wordt ook gebruikt voor AB testing)
-de percentage worden op dag basis berekend. Niet per minuut 
-Je hebt een apart record nodig per endpoint
-+++
-Latency: bij latency based routing wordt er gekeken naar de latency van de route tussen de aanvrager en de verschillende endpoints
-+++
-Failover: routeert in eerste instantie naar je A site en bepaald op basis van een Health check of het verkeer geswitcht moet worden naar een B site . 
-+++
-Geolocation: routering gebaseerd op de geografische locatie van je gebruikers . 
-
----
-# opdracht 
-+++
-Maak met behulp van de tot nu toe behandelede middelen (EC2, S3, Route53.... ) een hosting oplossing voor onze tech blog 
-+++
-### Voorwaarden 
-
-* 1) Het uitvallen van een regio binnen aws moeten worden overleeft. 
-* 2) Pieken in verkeer moeten worden opgevangen. 
-* 3) te benaderen via <yournamehere>.fredforet.nl
-* 4) Niet meteen geharmend wordt .. (denk aan sec. groups, policies ed.)
-* 5) Niet plat op S3 gehost wordt ..... (dit voor de meer lui ingestelden onder ons)
+## Welke database varianten zijn er binnen Amazon RDS
 
 +++
+* SQL server
+* Oracle
+* MySql
+* Postgresql
+* aurora
+* MariaDB
 
-Over een uur gaan we de verschillende oplossingen bespreken
-... tik tok tik tok .. duurt lang ... 
-
-als je de source files van de blog nodig hebt dan hoor ik het graag
+---
+## Welke Vijf diensten zijn er binnen het AWS database aanbod
 +++
+*OLTP: RDS
+*OLAP: REDSHIFT
+*NoSql: Dynamodb
+*Caching: Elasticache
+*DMS: Database Migration Services
+
+---
+## Welke twee versies van Elasticache zijn er 
+
++++
+* Redis
+* Memcached
+---
+
+## Was is DMS
++++
+Database Migration service
+---
+## Welke dienst gebruik je voor OLTP
++++
+Amazon RDS een een of andere vorm
+
+---
+## Wat is RedShift
++++
+Datawharehousing 
+---
+## Welke database service schaalt on the fly?
+
++++
+DynamoDB
+
+---
+## wat is het verschil tussen automated and snapshot backups binnen RDS
++++
+Automated backups geven een point in time restore mogenlijkheid en zijn verbonden aan de database 
+Snapshots niet deze zijn gebruiker geinstantieerd en blijven bewaard nadat de database al weg is .  
+---
+## Welke twee modi kent DynamoDB
++++
+* document
+* key/value
+
+---
+## welke twee read policies zijn er binnen DynamoDB
++++
+* eventually consitent
+* Strong consistantcy
+
+---
+## Wat is Redshift
++++
+Amazon AWS datawharehousing oplossing (OLAP)
+---
+
+## Hoe groot kan redshift worden ? 
+
++++
+160 GB per node. 128 Nodes 
+---
+## wat zijn de drie hoofd kenmerken van Redshift
++++
+* Columnar data storage
+* Advanced compression
+* MPP; Massively Parallel Processing
 
 
+---
+## is Redshift Highly available?
++++
+Nee. Redshift is gebonden aan 1 availability zone
 
+---
+## wat doet elasticache?
++++
+ Elasticache cached veel bevraagde data in in-memory cache waardoor het de database ontlast
+---
+## Wat is aurora
++++
+Aurora is een mysql compatible database service 
+---
+## welke twee replica varianten zijn er mbt aurora
++++
+* aurora read replicas
+* mysql read replicas
+---
+## wat zijn de scaling parameters van aurora db
++++
+min 10GB max 64TB
+max 32vCPUs en 244GB memory
+---
+## hoeveel copieen van je data krijg je standaard voor een aurora db ? 
++++
+minimaal 6 . 
+2 copieen per az 3 az's minimaal 
