@@ -13,11 +13,11 @@
 ---
 ## Welke Vijf diensten zijn er binnen het AWS database aanbod
 +++
-*OLTP: RDS
-*OLAP: REDSHIFT
-*NoSql: Dynamodb
-*Caching: Elasticache
-*DMS: Database Migration Services
+* OLTP: RDS
+* OLAP: REDSHIFT
+* NoSql: Dynamodb
+* Caching: Elasticache
+* DMS: Database Migration Services
 
 ---
 ## Welke twee versies van Elasticache zijn er 
